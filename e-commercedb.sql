@@ -19,3 +19,11 @@ CREATE TABLE product_category (
     description TEXT,
     FOREIGN KEY (parent_category_id) REFERENCES product_category(id)
 );
+
+-- Create table for product brand
+CREATE TABLE brand (
+    id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    logo_url VARCHAR(255)
+);
