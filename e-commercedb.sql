@@ -48,3 +48,23 @@ CREATE TABLE attribute_type (
     id INT PRIMARY KEY,
     name VARCHAR(100) NOT NULL
 );
+
+-- Create table for product attribute categories
+CREATE TABLE attribute_category (
+    id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT
+);
+
+-- Create table for products
+CREATE TABLE product (
+    id INT PRIMARY KEY,
+    brand_id INT NOT NULL,
+    category_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    base_price DECIMAL(10,2) NOT NULL,
+    created_at TIMESTAMP,
+    FOREIGN KEY (brand_id) REFERENCES brand(id),
+    FOREIGN KEY (category_id) REFERENCES product_category(id)
+);
