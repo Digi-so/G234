@@ -27,3 +27,10 @@ CREATE TABLE brand (
     description TEXT,
     logo_url VARCHAR(255)
 );
+
+-- Create table for product size categories
+CREATE TABLE size_category (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    description TEXT
+);
