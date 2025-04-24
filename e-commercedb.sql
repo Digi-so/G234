@@ -10,3 +10,12 @@ CREATE TABLE color (
     name VARCHAR(50) NOT NULL,
     hex_code VARCHAR(7)
 );
+
+-- Create table for product categories
+CREATE TABLE product_category (
+    id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    parent_category_id INT,
+    description TEXT,
+    FOREIGN KEY (parent_category_id) REFERENCES product_category(id)
+);
