@@ -68,3 +68,28 @@ CREATE TABLE product (
     FOREIGN KEY (brand_id) REFERENCES brand(id),
     FOREIGN KEY (category_id) REFERENCES product_category(id)
 );
+
+-- Create table for product images
+CREATE TABLE product_image (
+    id INT PRIMARY KEY,
+    product_item_id INT NOT NULL,
+    image_url VARCHAR(255),
+    alt_text VARCHAR(255),
+    created_at TIMESTAMP,
+    FOREIGN KEY (product_item_id) REFERENCES product(id)
+);
+
+-- Create table for product items
+CREATE TABLE product_item (
+    id INT PRIMARY KEY,
+    product_id INT NOT NULL,
+    sku VARCHAR(50) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    stock_quantity INT NOT NULL,
+    color_id INT,
+    size_option_id INT,
+    created_at TIMESTAMP,
+    FOREIGN KEY (product_id) REFERENCES product(id),
+    FOREIGN KEY (color_id) REFERENCES color(id),
+    FOREIGN KEY (size_option_id) REFERENCES size_option(id)
+);
