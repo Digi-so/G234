@@ -34,3 +34,11 @@ CREATE TABLE size_category (
     name VARCHAR(50) NOT NULL,
     description TEXT
 );
+
+-- Create table for product size options
+CREATE TABLE size_option (
+    id INT PRIMARY KEY,
+    size_category_id INT NOT NULL,
+    value VARCHAR(50) NOT NULL,
+    FOREIGN KEY (size_category_id) REFERENCES size_category(id)
+);
