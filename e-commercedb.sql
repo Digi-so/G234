@@ -42,3 +42,9 @@ CREATE TABLE size_option (
     value VARCHAR(50) NOT NULL,
     FOREIGN KEY (size_category_id) REFERENCES size_category(id)
 );
+
+-- Create table for product attributes
+CREATE TABLE attribute_type (
+    id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
