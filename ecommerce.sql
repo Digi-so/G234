@@ -2,7 +2,7 @@
 CREATE DATABASE IF NOT EXISTS e_commerce_db;
 
 -- Use the database
-USE database_name;
+USE e_commerce_db;
 
 -- Create table for color
 CREATE TABLE color (
