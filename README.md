@@ -21,7 +21,7 @@ This SQL script creates the `e_commerce_db` database and defines all required ta
 - **MySQL** – Relational Database Management System  
 - **SQL** – Structured Query Language  
 - **GitHub** – Version control and collaboration  
-- **Lucidchart / dbdiagram.io** – ERD Design  
+- **dbdiagram.io** – ERD Design  
 
 ---
 
